@@ -37,6 +37,8 @@
 * 第三方平台接入开发者平台的iFrame内的MINISITE在流程中引导开发者完善或者补充自己平台的信息，进而脱离开发者平台
 
 
+具体接入流程：
 
-具体技术文档：（随后更新）
+
+具体技术文档：[Cocos开发者平台接口说明文档API](https://github.com/aaronglyang/cocos_com/blob/master/Cocos%E5%BC%80%E5%8F%91%E8%80%85%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%85%A5%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8EAPI.md)
 
