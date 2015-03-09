@@ -59,7 +59,9 @@ __3. 生成签名字符串必须是所有除sign本身以外的其它所有参�
 ###站内应用接入
 
 
-示例：http://cn.cocos.com/demo/play?app_id=613934525&app_key=4e62a8e22db0fe0a5e2db487ba4282a9&app_platform=1&create=1412818164&expire=1412904564&session=849a0a464212d4b624e0de7b52d1c943&uid=400053&sign=5c64367fb7d181a7a592c3521da6322f
+示例：
+
+`http://cn.cocos.com/demo/play?app_id=613934525&app_key=4e62a8e22db0fe0a5e2db487ba4282a9&app_platform=1&create=1412818164&expire=1412904564&session=849a0a464212d4b624e0de7b52d1c943&uid=400053&sign=5c64367fb7d181a7a592c3521da6322f`
 
 (注：以上地址目录不可访问，仅做URL展示示例)
 
@@ -99,7 +101,7 @@ __3. 生成签名字符串必须是所有除sign本身以外的其它所有参�
 
 返回数据（JSON）：
 
-| 参数名称 | 参数解释说明|
+| 参数名称 | 参数解释说明 |
 |----|----|
 |access_token	 | 访问令牌，接下来的每次访问都需要使用。|
 |refresh_token | 	刷新令牌（在访问令牌过期后，执行“刷新访问令牌”操作时使用，每次刷新访问令牌会同步更新刷新令牌）|
@@ -116,12 +118,13 @@ __3. 生成签名字符串必须是所有除sign本身以外的其它所有参�
 `https://passport.cocos.com/oauth2/access_token`
 
 上传参数：
-| 参数名称 | 参数解释说明|
+
+| 参数名称 | 参数解释说明 |
 |----|----|
-|uid	|用户ID|
+|uid | 用户ID|
 |refresh_token	|刷新令牌(第二步获取到的刷新令牌)|
-|grant_type	|refresh_token|
-|sign|	数据签名|
+|grant_type	| refresh_token |
+|sign|	数据签名 |
 
 返回数据：
 
@@ -137,6 +140,7 @@ __3. 生成签名字符串必须是所有除sign本身以外的其它所有参�
 `https://passport.cocos.com/app/service?app_id=`
 
 上传参数
+
 | 参数名称 | 参数解释说明|
 |----|----|
 |access_token	|用户访问令牌|
@@ -219,12 +223,12 @@ __3. 生成签名字符串必须是所有除sign本身以外的其它所有参�
 
 成功示例：
 
-__{"status":1,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u6210\u529f "}__
+``{"status":1,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u6210\u529f "}``
 
 
 失败示例：
 
-__{"status":2,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u5931\u8d25 "}__
+``{"status":2,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u5931\u8d25 "}``
 
 ###通知来源校验
 
@@ -243,6 +247,7 @@ __{"status":2,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u5931\u8d25 "}__
 |sign	|数据签名|
 
 成功返回参数：
+
 | 参数名称 | 参数解释说明|
 |----|----|
 |status	|状态码|
@@ -251,7 +256,6 @@ __{"status":2,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u5931\u8d25 "}__
 
 返回参数说明：
 
-
 |status	|info	|返回信息说明	|data|
 |----|----|----|----|
 |1	|true|	notify_id验证正确	|空|
@@ -259,11 +263,11 @@ __{"status":2,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u5931\u8d25 "}__
 
 成功示例：
 
-{"status":1,"info":"true","data":""}
+``{"status":1,"info":"true","data":""}``
 
 失败示例：
 
-{"status":2,"info":" false","data":""}
+``{"status":2,"info":" false","data":""}``
 
 
 ###订单创建
@@ -276,6 +280,7 @@ __{"status":2,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u5931\u8d25 "}__
 
 
 上传参数：
+
 |参数名	|参数说明|
 |----|----|
 |app_key|	第三方应用的app_key 。|
@@ -291,11 +296,11 @@ __{"status":2,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u5931\u8d25 "}__
 
 成功示例：
 
-{"status":1,"info":"\u8ba2\u5355\u521b\u5efa\u6210\u529f","data":" COCOS02000591691D05A32 "}
+``{"status":1,"info":"\u8ba2\u5355\u521b\u5efa\u6210\u529f","data":" COCOS02000591691D05A32 "}``
 
 失败示例：
 
-{"error":"invalid_grant","error_description":"\u7528\u6237\u5df2\u5b58\u5728","error_code":20501,"error_uri":""}
+``{"error":"invalid_grant","error_description":"\u7528\u6237\u5df2\u5b58\u5728","error_code":20501,"error_uri":""}``
 
 10.	订单状态更新（向开发者平台通知订单状态）
 
@@ -306,6 +311,7 @@ __{"status":2,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u5931\u8d25 "}__
 `https://passport.cocos.com/order/update_status`
 
 上传参数：
+
 |参数名	|参数说明|
 |----|----|
 |app_key	|第三方应用的app_key |
@@ -315,6 +321,7 @@ __{"status":2,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u5931\u8d25 "}__
 
 
 订单状态说明
+
 |参数名	|参数说明|
 |----|----|
 |2	|已发货/购买成功|
@@ -329,11 +336,11 @@ __{"status":2,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u5931\u8d25 "}__
 
 成功示例：
 
-{"status":1,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u6210\u529f ","data":""}
+``{"status":1,"info":" \u8ba2\u5355\u72b6\u6001\u66f4\u65b0\u6210\u529f ","data":""}``
 
 失败示例：
 
-{"error":"invalid_grant","error_description":"\u7528\u6237\u5df2\u5b58\u5728","error_code":20502,"error_uri":""}
+``{"error":"invalid_grant","error_description":"\u7528\u6237\u5df2\u5b58\u5728","error_code":20502,"error_uri":""}``
 
 
 ###JS API接口
@@ -367,7 +374,7 @@ order_id	第三方订单号。
 
 例：
 
-{"status":1,"info":"\u8ba2\u5355\u521b\u5efa\u6210\u529f","data":" COCOS02000591691D05A32 "}
+``{"status":1,"info":"\u8ba2\u5355\u521b\u5efa\u6210\u529f","data":" COCOS02000591691D05A32 "}``
 
 
 ###错误信息
@@ -384,10 +391,10 @@ order_id	第三方订单号。
 
 例：
 
-{"error":"invalid_grant","error_description":"Token\u4e0d\u5b58\u5728\u6216\u5df2\u8fc7\u671f\u3002","error_code":20017,"error_uri":""}
+``{"error":"invalid_grant","error_description":"Token\u4e0d\u5b58\u5728\u6216\u5df2\u8fc7\u671f\u3002","error_code":20017,"error_uri":""}``
 以上json进行解析成为数组后为：
 
-
+``
 Array
 (
     [error] => invalid_grant
@@ -395,7 +402,7 @@ Array
     [error_code] => 20017
     [error_uri] => 
 )
-
+``
 
 
 ###错误代码列表
