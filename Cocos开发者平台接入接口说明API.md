@@ -51,7 +51,7 @@ Authorization Server 和 Resource Server 目前均指开发者平台，即这些
 
 参考
 
-`
+```
   function make_sign($arr, $secret) {
        ksort($arr);
        $res = '';
@@ -63,7 +63,7 @@ Authorization Server 和 Resource Server 目前均指开发者平台，即这些
         return strtoupper(MD5($res));
     }
     
-  `
+```
 
 注意：
 
