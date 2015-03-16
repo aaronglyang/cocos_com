@@ -49,7 +49,24 @@ Authorization Server 和 Resource Server 目前均指开发者平台，即这些
 
 `1f04f8520ce4808761aa4fc1ad04e838`
 
+参考
+
+``
+  function make_sign($arr, $secret) {
+       ksort($arr);
+       $res = '';
+        foreach ($arr as $key => $value) {
+            $res.=$key .'='. $value;
+        }
+        $res .= $secret;
+
+        return strtoupper(MD5($res));
+    }
+  ``
+
 注意：
+
+
 __1. 关于签名字符串，最后生成的应用都是小写。__
 
 __2. 待签名的字符串值应当是没有进行过URL Ecodeing的原值，而且传输的过种中，如果参数中含有特殊字符，如@、&之类的，在传输的时候，需要进行URL Ecodeing操作。__
