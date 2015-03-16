@@ -52,16 +52,19 @@ Authorization Server 和 Resource Server 目前均指开发者平台，即这些
 参考
 
 ```
-  function make_sign($arr, $secret) {
-       ksort($arr);
-       $res = '';
-        foreach ($arr as $key => $value) {
-            $res.=$key .'='. $value;
-        }
-        $res .= $secret;
+ function get_sign_str($arr, $ignore = 'sign'){
+		ksort($arr);
+		reset($arr);
+		$str = '';
+		while (list ($key, $val) = each($arr)) {
+			if($key != $ignore){
+				$str.=$key . "=" . $val . "&";
+			}
+		}
+		$str = substr($str, 0, -1);//去掉最后多余&
+		return $str;
+	}
 
-        return strtoupper(MD5($res));
-    }
     
 ```
 
