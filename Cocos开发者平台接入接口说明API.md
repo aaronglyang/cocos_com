@@ -71,7 +71,8 @@ Authorization Server 和 Resource Server 目前均指开发者平台，即这些
 		return $str;
 	}
 
-    
+ $sign = get_sign_str($data);
+ $sign = md5($sign);
 ```
 
 注意：
