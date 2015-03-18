@@ -25,9 +25,15 @@ Authorization Server 和 Resource Server 目前均指开发者平台，即这些
 
 签名规则适应用于所有需要进行签名验证的接口。
 
-在请求参数列表中，除去sign参数外，其他需要使用到的参数都是要签名的参数。
+1.在请求参数列表中，除去sign参数外，其他需要使用到的参数都是要签名的参数。
 
-对参数按a-z的顺序进行排序，然后使用&符号，将需要签名的数据按照key=val的形式连接起来最后附加上app_secret的值，示例URL：
+2.对参数(key)按a-z的顺序进行排序
+
+3. 使用&符号，将需要签名的数据按照key=val的形式连接起来(去掉最后的 & ）
+
+4. 最后附加上app_secret的值
+
+示例URL：
 
 `https://passport.cocos.com/oauth/token/?client_id=103&app_key=aeb09dcb8e1eab0d1306625b268d5e2a&grant_type=password&password=111111&username=hhhhhh@chukong-inc.com&sign=1f04f8520ce4808761aa4fc1ad04e838`
 
