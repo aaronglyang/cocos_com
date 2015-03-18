@@ -2,9 +2,6 @@
 
 Cocos开发者平台说明文档
 
-
-[【百度】](http://baidu.com)
-
 Cocos引擎官网：http://www.cocos.com/
 
 Cocos开发者平台：http://cn.cocos.com/
