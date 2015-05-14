@@ -8,7 +8,13 @@
     }
 
 
-[http://baidu.com baidu]
+\*   Red
+\*   Green
+\*   Blue
+
+*   Red
+*   Green
+*   Blue
 
 # H1标签
 ## H2标签
