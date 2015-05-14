@@ -16,9 +16,19 @@
 *   Green
 *   Blue
  
--Red
--Green
--Blue
+1.Red
+1.Green
+3.Blue
+
+这是一个普通段落。
+
+<table>
+    <tr>
+        <td>Foo</td>
+    </tr>
+</table>
+
+这是另一个普通段落。
 
 # H1标签
 ## H2标签
